@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web player: Music for everyone</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="asset/img/logo.png" />
+
+    <link rel="stylesheet" href="asset/css/9-level.css" />
+  </head>
+  <body class="body">
+    <div class="main  respone_main">
+      <div class="sidebar">
+        <div class="nav">
+          <div class="nav-option" style="opacity: 1">
+            <i class="fa-solid fa-house"></i>
+            <a href="">Home</a>
+          </div>
+          <div class="nav-option">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <a href="">Search</a>
+          </div>
+        </div>
+        <div class="libary">
+          <div class="option">
+            <div class="libary-option nav-option">
+              <img src="asset/img/library_icon.png" alt="" />
+              <a href="">Your Libary</a>
+            </div>
+            <div class="ican">
+              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+          <div class="boxes">
+            <div class="lib-box">
+              <p class="box-p1">Create your first playlist</p>
+              <p class="box-p2">It's easy, we'll help you</p>
+              <button class="badge">Create playlist</button>
+            </div>
+          </div>
+          <div class="boxes">
+            <div class="lib-box">
+              <p class="box-p1">Let's find some podcasts to follow</p>
+              <p class="box-p2">We'll keep you updated on new episodes</p>
+              <button class="badge">Browser podcasts</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-contant">
+        <div class="stick-nav">
+          <div class="sticky-nav-icons">
+            <img src="asset/img/backward_icon.png" alt="" />
+            <img src="asset/img/forward_icon.png" class="hide" />
+          </div>
+          <div class="sticky-nav-option">
+            <button class="badge nav-item hide">Explore Prenium</button>
+            <button class="badge nav-item dark-badge">
+              <i class="fa-regular fa-circle-down" style="margin-right: 5px"></i
+              >Install App
+            </button>
+            <i class="fa-regular fa-user nav-item"></i>
+          </div>
+        </div>
+        <h2>Rescently Played  </h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="asset/img/music12.jpeg" class="card-img" alt="" /> 
+            <p class="card-title">Halamithi Habibo</p>
+            <p class="card-info">Halamithi Habibo - Arabic kuthu ...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music15.jpeg" class="card-img" alt="" />
+            <p class="card-title">Ye Mumkin To</p>
+            <p class="card-info">Ye Mumkin To Nahi Jo Dil Ne Chaha...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music11.jpeg" class="card-img" alt="" />
+            <p class="card-title">Deva Deva </p>
+            <p class="card-info">Deva Deva Brahmāstra Amit...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+
+        </div>
+        <h2>Trending now near you <span class="showAll">Show All</span></h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="asset/img/music1.jpg" class="card-img" alt="" />
+            <p class="card-title">Teri Baaton Mein </p>
+            <p class="card-info">Teri Baaton Mein Aisa Uljha Jiya Title...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+            <audio id="audio" 
+             src="asset/music/Halamithi Habibo (Hindi) - Lyric Video _ Beast _ Thalapathy Vijay _ Sun Pictures _ Nelson _ Anirudh ( 256kbps cbr ).mp3",
+            ></audio>
+          </div>
+          <div class="card">
+            <img src="asset/img/music2.png" class="card-img" alt="" /> 
+            <p class="card-title">KHULLARG - HMM</p>
+            <p class="card-info">KHULLARG - HMM OFFICIAL MUSIC...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music9.jpeg" class="card-img" alt="" />
+            <p class="card-title">PAISA</p>
+            <p class="card-info">Seven Hundred Fifty Official s...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>           
+          </div>
+
+          <div class="card" >
+            <img src="asset/img/music7.jpg" class="card-img" alt="" />
+            <p class="card-title">Tu Jo Mila Raabta</p>
+            <p class="card-info">Tu Jo Mila Raabta _ Shirley Setia Jubi...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>  
+          </div>
+          <div class="card">
+            <img src="asset/img/music17.jpeg" class="card-img" alt="" />
+            <p class="card-title">Maan Meri Jaan</p>
+            <p class="card-info">Maan Meri Jaan _ Official Music Song...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+        </div>
+        <h2>Romanitc Song <span class="showAll">Show All</span></h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="asset/img/music20.jpeg" class="card-img" alt="" />
+            <p class="card-title">Dekha Hazaro</p>
+            <p class="card-info"> Rustom Akshay Kumar & Ileana Dcruz...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music24.jpeg" class="card-img" alt="" />
+            <p class="card-title">Tera Ban Jaunga</p>
+            <p class="card-info"> Kabir Singh Shahid K, Kiara A, Sand...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music23.jpeg" class="card-img" alt="" />
+            <p class="card-title">Bol Do Na Zara</p>
+            <p class="card-info">Main Agar Kahoon Bol Do Na Zara T-Se...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music19.jpg" class="card-img" alt="" />
+            <p class="card-title">Samjhawan</p>
+            <p class="card-info">Humpty Sharma Ki Dulhania...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music22.jpeg" class="card-img" alt="" />
+            <p class="card-title">Mast Magan</p>
+            <p class="card-info">Arijit Singh Arjun Kapoor, Alia Bh...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music8.jpg" class="card-img" alt="" />
+            <p class="card-title">Agar Tum Saath</p>
+            <p class="card-info">Agar Tum Saath Ho FULL AUDIO Song Ta...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music3.jpg" class="card-img" alt="" />
+            <p class="card-title">LUT GAYE</p>
+            <p class="card-info">Teri Nazron Ne Kuch Aisa Jadoo Kiya Lut G</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music10.jpeg" class="card-img" alt="" />
+            <p class="card-title">Baatein Ye Kabhi </p>
+            <p class="card-info">Baatein Ye Kabhi Na Full Video - Khamu...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music13.jpeg" class="card-img" alt="" />
+            <p class="card-title">Kuch baatein</p>
+            <p class="card-info">Mana Hum Yaha Hai Dil Magar Vaha Hai...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music14.jpeg" class="card-img" alt="" />
+            <p class="card-title">Tera naam doon</p>
+            <p class="card-info">Its Entertainment Atif Aslam Latest...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+
+        </div>
+        <h2>punjabi Song <span class="showAll">Show All</span></h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="asset/img/music4.jpeg" class="card-img" alt="" />
+            <p class="card-title">Lehanga </p>
+            <p class="card-info">Lehanga Jass Manak (Official Video) ...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music18.jpeg" class="card-img" alt="" />
+            <p class="card-title">Nai Jaana</p>
+            <p class="card-info">Tulsi Kumar, Sachet Tandon, Tanishk...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card" >
+            <img src="asset/img/music5.jpeg" class="card-img" alt="" />
+            <p class="card-title">DAKU (Remix)</p>
+            <p class="card-info">DAKU (Remix) Chani Nattan INDERPAL...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music16.jpeg" class="card-img" alt="" />
+            <p class="card-title">Raanjhana Ve</p>
+            <p class="card-info">Antara Mitra Soham Naik Uddipan So...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music6.jpeg" class="card-img" alt="" />
+            <p class="card-title">Tu Aake Dekhle</p>
+            <p class="card-info">King - Tu Aake Dekhle The Carnival ...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+        </div>
+        <h2>90's Hindi Hits Song <span class="showAll">Show All</span></h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="asset/img/music25.jpeg" class="card-img" alt="" />
+            <p class="card-title">Chanda Chamke</p>
+            <p class="card-info">Fanaa _ Aamir Khan, Kajol, Rishi Ka...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music26.jpeg" class="card-img" alt="" />
+            <p class="card-title">Hum Toh Deewane </p>
+            <p class="card-info">Shahrukh Khan & Twinkle Khanna Baads...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music27.jpeg" class="card-img" alt="" />
+            <p class="card-title">Aisa Deewana </p>
+            <p class="card-info">Sonu Nigam Hits Sahid Kapoor & Tulip J...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music28.jpeg" class="card-img" alt="" />
+            <p class="card-title">Chand Se Parda</p>
+            <p class="card-info">Saif Ali Khan & Shilpa Shetty...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music29.jpeg" class="card-img" alt="" />
+            <p class="card-title">Chand Se Parda</p>
+            <p class="card-info">Saif Ali Khan & Shilpa Shetty...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+        </div>
+        <h2>Featured Charts <span class="showAll">Show All</span></h2>
+        <div class="cards-container">
+          <div class="card">
+            <img src="asset/img/music48.jpeg" class="card-img" alt="" />
+            <p class="card-title">Top 50-Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music49.jpeg" class="card-img" alt="" />
+            <p class="card-title">Top 50-Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music50.jpeg" class="card-img" alt="" />
+            <p class="card-title">Top 50-Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music48.jpeg" class="card-img" alt="" />
+            <p class="card-title">Top 50-Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+          <div class="card">
+            <img src="asset/img/music49.jpeg" class="card-img" alt="" />
+            <p class="card-title">Top 50-Global</p>
+            <p class="card-info">Your daily updates of the most played...</p>
+            <i class="fa-solid fa-circle-play hover_play" onclick="toggleAudio()"></i>
+          </div>
+        </div>
+
+        <div class="footer">
+          
+          <div class="company">
+            <h5>Company</h5>
+            <p>About</p>
+            <p>Jobs</p>
+            <p>For the Record</p>
+          </div>
+          <div class="Communities">
+            <h5>Communities</h5>
+            <p>For Artists</p>
+            <p>Developers</p>
+            <p>Advertising</p>
+            <p>Investors</p>
+            <p>Vendors</p>
+          </div>
+          <div class="Useful_links">
+            <h5>Useful links</h5>
+            <p>Support</p>
+            <p>Free Mobile App</p>
+          </div>
+          <div></div>
+          
+          <div class="social_links">
+            <div class="social_links_icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="social_links_icon">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="social_links_icon">
+              <i class="fa-brands fa-facebook"></i>
+            </div>
+          </div>
+
+        </div>
+        <div class="line">
+          <span class="footer_Info">Legal</span>
+          <span class="footer_Info">Safety & Privacy Center </span>
+          <span class="footer_Info">Privacy policy</span>
+          <span class="footer_Info">Coolies</span>
+          <span class="footer_Info">About Ads</span>
+          <span class="footer_Info">Accessibility</span>
+          <span class="footer_Info">&copy; 2024 Spotify AB</span>
+        </div>
+        
+
+      </div>
+      
+
+      <!-- ============music-player============== -->
+      <div class="music-player">
+        <div class="album">
+          <div id="songInfo">
+            <img id="songImage" class="songImage" src="asset/img/music12.jpeg" alt="Song Image">
+            <span id="songTitle" class="songTitle" >Halamithi Habibo (Hindi)</span>
+          </div>
+        </div>
+        <audio src="asset/music/Kumar Sanu 90_s Hits _ Chand Se Parda Kijiye _ Aao Pyar Karen [1994] _ Saif Ali Khan & Shilpa Shetty.m4a"></audio>
+        <div class="player">
+
+          <div class="player-controls">
+            <div class="player-control-btn">
+              
+              <button class="player-button backward-song-button">
+                <i class="fa-solid fa-backward-step icons"></i>
+              </button>
+              <button class="player-button backward-button">
+                <i class="fa-solid fa-backward icons"></i>
+              </button>
+              <button class="player-button " id="play-btn">
+                <i class="fa-solid fa-circle-play icons opct1" ></i>
+              </button>
+              <button class="player-button forward-button">
+                <i class="fa-solid fa-forward icons"></i>
+              </button>
+              <button class="player-button forward-song-button">
+                <i class="fa-solid fa-forward-step icons"></i>
+              </button>
+              <button class="player-button down " id="sequenceBtn"  >
+                <i class="fa-solid fa-repeat icons" ></i>
+              </button>
+            </div>
+
+            <div class="player-progress-bar">
+              <span id="currentTime">0:00</span>
+              <input type="range" class="timeline" max="100" value="0" step="0.01" />
+              <span id="totalTime">0:00</span>
+            </div>
+
+
+          </div>
+
+
+
+          
+        </div>
+
+        <div class="volume">
+
+          <div class="volume-controls-btn">
+            <button class="player-button compact-disc">
+              <i class="fa-solid fa-compact-disc icons"></i>
+            </button>
+            <button class="player-button headphones">
+              <i class="fa-solid fa-headphones-simple icons"></i>
+            </button>
+            <button class="player-button volume-high" id="sound-button">
+              <i class="fa-solid fa-volume-high icons"></i>
+            </button>
+           
+            <div class="layer-progress-bar">
+              <input type="range" class="volume-control" max="100" value="70">
+            </div>
+            <button class="player-button fa-minimize">
+              <i class="fa-solid fa-minimize icons"></i>
+            </button>
+            
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+  
+
+</script>
+
+  <script src="asset/js/app.js"></script>
+</html>
