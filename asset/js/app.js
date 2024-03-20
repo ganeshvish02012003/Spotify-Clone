@@ -171,17 +171,10 @@ function updateSongInfo(songs) {
   document.getElementById("songImage").src = songs.image;
 
   // Set the song backgroundImage
-  const mainElement = document.querySelector(".respone_main");
   const body = document.querySelector("body");
 
-    if( mainElement||window.innerWidth<=768 ){
-      mainElement.style.backgroundImage = `url('${songs.image}')`;
-      mainElement.style.backgroundColor = ` `;
-    }
-    else{
-      mainElement.style.backgroundImage = ``;
-      mainElement.style.backgroundColor = ` black`;
-    }
+  body.style.backgroundImage = `url('${songs.image}')`;
+ 
 }
 
 // =========================music-player-btn=======================
