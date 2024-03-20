@@ -172,7 +172,7 @@ body {
 }
 .cards-container .card:hover .hover_play {
   position: relative;
-  top: -196px;
+  top: -212px;
   height: 65%;
   width: 100%;
   font-size: 40px;
